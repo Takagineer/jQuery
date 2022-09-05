@@ -5,10 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>jQuery</title>
+  <style>
+    li{
+      cursor: pointer;
+    }
+    li:hover::after{
+      content:'[x]';
+      font-size: 14px;
+      color: #aaa;
+      margin-left:4px;
+    }
+  </style>
 </head>
 <body>
-  <button>Go</button>
+  <input type="text">
+  <button>追加</button>
   <p>こんにちは！</p>
+  <ul>
+  </ul>
   
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>

@@ -1,7 +1,20 @@
 "use strict";
 
+// const { parserConfiguration } = require("yargs");
+
 $(() => {
+  const $input = $("input");
+  $input.focus();
+
   $("button").click(() => {
-    $("p").text("おやすみ");
+    $("<li>").text($input.val()).appendTo("ul");
+    $input.val("").focus();
+  });
+
+  $("ul").click((e) => {
+    if (e.target.nodeName !== " LI" || !confirm("are you sure")) {
+      return;
+    }
+    $(e.target).fadeOut();
   });
 });
